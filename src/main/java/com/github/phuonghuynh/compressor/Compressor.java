@@ -7,7 +7,6 @@ import java.util.Collection;
 
 import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -65,8 +64,8 @@ public class Compressor extends AbstractMojo {
                         workingDirectory));
          }
 
-         Collection<File> files = FileUtils.listFiles(workingDir, filterExt != null ? filterExt.replaceAll(" ", "").split(",") : null,
-               includeSubDirectories);
+         Collection<File> files = FileUtils.listFiles(workingDir, filterExt != null ? filterExt.replaceAll(" ", "")
+               .split(",") : null, includeSubDirectories);
          for (File file : files) {
             String fullpath = file.getCanonicalPath();
             getLog().info(String.format("Processing file %s", fullpath));
