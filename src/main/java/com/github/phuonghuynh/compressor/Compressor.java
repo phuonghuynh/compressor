@@ -74,7 +74,7 @@ public class Compressor extends AbstractMojo {
             zFile.getParentFile().mkdirs();
             GzipCompressorOutputStream gzip = new GzipCompressorOutputStream(new FileOutputStream(zFile));
             gzip.write(FileUtils.readFileToByteArray(file));
-            getLog().info(String.format("Zipped to %s", zFile.getAbsolutePath()));
+            getLog().info(String.format("Compressing to %s", zFile.getAbsolutePath()));
             gzip.close();
          }
       }
