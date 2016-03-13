@@ -20,6 +20,8 @@ deployment:
     branch: staged
     owner: phuonghuynh
     commands:
+      - git config --global url."git://".insteadOf https://
+      - git config --list
       - git config user.name "phuonghuynh"
       - git config user.email "phuonghqh@gmail.com"
       - git remote prune origin
