@@ -196,6 +196,6 @@
   <scm>
     <connection>scm:git:git@github.com:phuonghuynh/compressor.git</connection>
     <developerConnection>scm:git:git@github.com:phuonghuynh/compressor.git</developerConnection>
-    <url>git@github.com:phuonghuynh/compressor.git</url>
+    <url>https://github.com:phuonghuynh/compressor.git</url>
   </scm>
 </project>
