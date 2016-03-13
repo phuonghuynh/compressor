@@ -14,15 +14,8 @@ deployment:
     branch: master
     owner: phuonghuynh
     commands:
-     - git config user.name "Sexy Deploybot"
-     - git config user.email "phuonghqh@gmail.com"
-     - git remote prune origin
+      - git config user.name "Sexy Deploybot"
+      - git config user.email "dev@finixpayments.com"
+      - git remote prune origin
+      - git checkout master && git pull -a && git checkout master
       - mvn --batch-mode -Dmaven.javadoc.skip=true -DautoVersionSubmodules=true -DallowSnapshots=true -DskipTests=true jgitflow:release-start jgitflow:release-finish
-  release:
-    branch: staged
-    owner: phuonghuynh
-    commands:
-     - git config user.name "Sexy Deploybot"
-     - git config user.email "dev@finixpayments.com"
-     - git remote prune origin
-     - mvn --batch-mode -Dmaven.javadoc.skip=true -DautoVersionSubmodules=true -DallowSnapshots=true -DskipTests=true jgitflow:release-start jgitflow:release-finish
