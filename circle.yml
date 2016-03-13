@@ -14,4 +14,4 @@ deployment:
     branch: master
     owner: phuonghuynh
     commands:
-      - mvn --batch-mode -Dmaven.javadoc.skip=true -DautoVersionSubmodules=true -DallowSnapshots=true -DskipTests=true jgitflow:release-start jgitflow:release-finish
+      - mvn -X --batch-mode -Dmaven.javadoc.skip=true -DautoVersionSubmodules=true -DallowSnapshots=true -DskipTests=true jgitflow:release-start jgitflow:release-finish
