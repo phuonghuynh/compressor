@@ -7,17 +7,4 @@
       <password>${env.OSS_PPWD}</password>
     </server>
   </servers>
-  <profiles>
-    <profile>
-      <id>gpg</id>
-      <properties>
-        <gpg.keyname>${env.OSS_PGPG_KEYNAME}</gpg.keyname>
-        <gpg.passphrase>${env.OSS_PGPG}</gpg.passphrase>
-      </properties>
-    </profile>
-  </profiles>
-  <activeProfiles>
-    <activeProfile>gpg</activeProfile>
-    <activeProfile>ossrh</activeProfile>
-  </activeProfiles>
 </settings>
