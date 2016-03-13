@@ -10,11 +10,11 @@ machine:
     PROCESSING_URL: http://b.papi.staging.finix.io/
 
 deployment:
-#  snapshot:
-#    branch: master
-#    owner: phuonghuynh
-#    commands:
-#      - mvn deploy -DskipTests=true -s settings.xml
+  snapshot:
+    branch: master
+    owner: phuonghuynh
+    commands:
+      - mvn clean install
   release:
     branch: staged
     owner: phuonghuynh
