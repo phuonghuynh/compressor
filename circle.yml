@@ -20,6 +20,7 @@ deployment:
     branch: staged
     owner: phuonghuynh
     commands:
+      - git config --global url."https://".insteadOf git://
       - git config --list
       - git config user.name "phuonghuynh"
       - git config user.email "phuonghqh@gmail.com"
