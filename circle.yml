@@ -20,10 +20,10 @@ deployment:
     branch: staged
     owner: phuonghuynh
     commands:
-      - git config --global url."https://".insteadOf git://
-      - git config --list
-      - git config user.name "phuonghuynh"
-      - git config user.email "phuonghqh@gmail.com"
-      - git remote prune origin
-      - git checkout master && git pull -a && git checkout staged
+#      - git config --global url."https://".insteadOf git://
+#      - git config --list
+#      - git config user.name "phuonghuynh"
+#      - git config user.email "phuonghqh@gmail.com"
+#      - git remote prune origin
+#      - git checkout master && git pull -a && git checkout staged
       - mvn -X --batch-mode -Dmaven.javadoc.skip=true -DautoVersionSubmodules=true -DallowUntracked=true -DallowSnapshots=true -DskipTests=true jgitflow:release-start jgitflow:release-finish
