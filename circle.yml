@@ -5,11 +5,15 @@ general:
       - /release.*/
 machine:
   pre:
-    - echo "" > .gitconfig
+    - echo "" > ~/.gitconfig
   java:
     version: oraclejdk8
   environment:
     PROCESSING_URL: http://b.papi.staging.finix.io/
+
+test:
+  override:
+    - echo "ignored"
 
 deployment:
   snapshot:
