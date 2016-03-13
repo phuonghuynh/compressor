@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.phuonghuynh</groupId>
@@ -148,11 +149,13 @@
           <enableSshAgent>true</enableSshAgent>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <pushReleases>true</pushReleases>
+          <username>${env.GITHUB_PUS}</username>
+          <password>${env.GITHUB_PPWD}</password>
 
           <flowInitContext>
             <masterBranchName>release</masterBranchName>
             <developBranchName>master</developBranchName>
-            <versionTagPrefix />
+            <versionTagPrefix/>
             <releaseBranchPrefix>release-</releaseBranchPrefix>
           </flowInitContext>
         </configuration>
