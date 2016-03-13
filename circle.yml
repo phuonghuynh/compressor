@@ -4,6 +4,8 @@ general:
     ignore:
       - /release.*/
 machine:
+  pre:
+    - echo "" > .gitconfig
   java:
     version: oraclejdk8
   environment:
