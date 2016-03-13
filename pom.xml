@@ -148,8 +148,6 @@
           <enableSshAgent>true</enableSshAgent>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <pushReleases>true</pushReleases>
-          <username>${env.GITHUB_PUS}</username>
-          <password>${env.GITHUB_PPWD}</password>
 
           <flowInitContext>
             <masterBranchName>release</masterBranchName>
