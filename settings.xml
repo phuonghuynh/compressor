@@ -9,14 +9,15 @@
   </servers>
   <profiles>
     <profile>
-      <id>ossrh</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+      <id>gpg</id>
       <properties>
-        <gpg.executable>gpg</gpg.executable>
+        <gpg.keyname>${env.OSS_PGPG_KEYNAME}</gpg.keyname>
         <gpg.passphrase>${env.OSS_PGPG}</gpg.passphrase>
       </properties>
     </profile>
   </profiles>
+  <activeProfiles>
+    <activeProfile>gpg</activeProfile>
+    <activeProfile>ossrh</activeProfile>
+  </activeProfiles>
 </settings>
