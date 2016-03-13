@@ -137,10 +137,10 @@
             <goals>
               <goal>sign</goal>
             </goals>
-            <configuration>
-              <keyname>${env.OSS_PGPG_KEYNAME}</keyname>
-              <passphraseServerId>${env.OSS_PGPG}</passphraseServerId>
-            </configuration>
+            <!--<configuration>-->
+              <!--<keyname>${env.OSS_PGPG_KEYNAME}</keyname>-->
+              <!--<passphraseServerId>ossrh</passphraseServerId>-->
+            <!--</configuration>-->
           </execution>
         </executions>
       </plugin>

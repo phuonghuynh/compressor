@@ -11,6 +11,10 @@ machine:
   environment:
     PROCESSING_URL: http://b.papi.staging.finix.io/
 
+dependencies:
+  pre:
+    - gpg --yes --batch --import 62912F3D.key
+
 test:
   override:
     - echo "ignored"
