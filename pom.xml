@@ -194,8 +194,8 @@
   </issueManagement>
 
   <scm>
-    <connection>scm:git:git@github.com:phuonghuynh/compressor.git</connection>
+    <connection>scm:git:https://github.com/phuonghuynh/compressor</connection>
     <developerConnection>scm:git:git@github.com:phuonghuynh/compressor.git</developerConnection>
-    <url>https://github.com:phuonghuynh/compressor.git</url>
+    <url>https://github.com/phuonghuynh/compressor</url>
   </scm>
 </project>
