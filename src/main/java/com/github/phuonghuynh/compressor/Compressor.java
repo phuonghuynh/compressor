@@ -69,7 +69,13 @@ public class Compressor extends AbstractMojo {
          for (File file : files) {
             String fullpath = file.getCanonicalPath();
             getLog().info(String.format("Processing file %s", fullpath));
-            File zFile = new File(outputDirectory + "/" + file.getCanonicalPath().replaceFirst(workingDirectory, "")
+			if(System.getProperty("os.name").contains("Windows")) {
+				getLog().info("OS is Windows-based, altering path strings to use Java-compatible path separators");
+				workingDirectory = workingDirectory.replace("\\", "/");
+				fullpath = fullpath.replace("\\", "/");
+			}
+			
+            File zFile = new File(outputDirectory + "/" + fullpath.replaceFirst(workingDirectory, "")
                   + "." + outputExt);
             zFile.getParentFile().mkdirs();
             GzipCompressorOutputStream gzip = new GzipCompressorOutputStream(new FileOutputStream(zFile));

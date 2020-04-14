@@ -12,7 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jdk.version>1.5</jdk.version>
+    <jdk.version>1.6</jdk.version>
     <commons-compress-version>1.8.1</commons-compress-version>
     <commons-io-version>2.4</commons-io-version>
   </properties>
@@ -111,11 +111,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10</version>
+        <version>3.1.0</version>
         <configuration>
           <nocomment>true</nocomment>
           <useDefaultManifestFile>true</useDefaultManifestFile>
-          <additionalparam>-Xdoclint:none</additionalparam>
+          <!--<additionalparam>-Xdoclint:none</additionalparam>-->
+		  <additionalJOption>-Xdoclint:none</additionalJOption>
         </configuration>
         <executions>
           <execution>
